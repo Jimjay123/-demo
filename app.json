@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "utils/common.js",
+    "pages/catagory/catagory",
+    "pages/cart/cart",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "京东商城",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color":"#5c5e6b",
+    "selectedColor": "#f00",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./image/home.png",
+        "selectedIconPath": "./image/home-hl.png"
+      },
+      {
+        "pagePath": "pages/catagory/catagory",
+        "text": "分类",
+        "iconPath": "./image/category.png",
+        "selectedIconPath": "./image/category-hl.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "./image/cart.png",
+        "selectedIconPath": "./image/cart-hl.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./image/me.png",
+        "selectedIconPath": "./image/me-hl.png"
+      }
+    ]
+  }
+}

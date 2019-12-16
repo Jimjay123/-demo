@@ -1,0 +1,63 @@
+<view>
+  <view class="{{scrollTop>swiperHeight ? 'top-bar active' : 'top-bar'}}">
+    <view class="scan">
+      <image src="/image/ai3.png"></image>
+    </view>
+    <view class="{{scrollTop>swiperHeight ? 'search active' : 'search'}}">
+      <view class="search-icon">
+        <image src="/image/ati.png"></image>
+      </view>
+      <input placeholder-class="place-holder" placeholder="请输入您想要搜索的商品"></input>
+    </view>
+    <view class="menu">
+      <image src="/image/ahw.png"></image>
+    </view>
+  </view>
+  <!-- 轮播图部分 -->
+  <swiper id="swiper" indicator-dots="true" indicator-active-color="#fff" indicator-color="rgba(255,255,255,.5)">
+    <block wx:for="{{imgUrl}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.image}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- nav部分 -->
+<view class="nav">
+  <ul>
+    <li wx:for="{{iconUrl}}" wx:key="index" class="item">
+      <image src="{{item.image}}"></image>
+      <view>{{item.title}}</view>
+    </li>
+  </ul>
+</view>
+<!-- 秒杀部分 -->
+<view class="sec-kill">
+  <view class="top">
+    <view class="pic">
+      <image src="/image/bej.png"></image>
+    </view>
+    <view class="more">
+      <text>更多秒杀</text>
+      <view class="arrow-right">
+        <image src="/image/arrowright.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="main-content">
+   <scroll-view scroll-x="true">
+    <view wx:for="{{secUrl}}" wx:key="index" class="scroll-item text-center">
+      <view class="pic"><image src="{{item.image}}"></image></view>
+      <text>{{item.price}}</text>
+    </view>
+   </scroll-view>
+   </view>
+</view>
+<!-- info部分 -->
+<view class="info">
+<view class="item1"><image src="/image/ad-0.jpg"></image></view>
+<view class="item1"><image src="/image/ad-big.jpg"></image></view>
+<view class="item1"><image src="/image/ad-1.jpg"></image></view>
+<view class="item2"><image src="/image/ad-left.jpg"></image></view>
+<view class="item2"><image src="/image/ad-right.jpg"></image></view>
+</view>

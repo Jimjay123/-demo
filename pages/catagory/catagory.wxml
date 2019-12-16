@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="aside-bar">
+    <scroll-view scroll-y="true" scroll-with-animation="true">
+      <block wx:for="{{ navLeftItems }}" wx:key="index">
+        <view>{{ item }}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="main-content">
+    <scroll-view scroll-y="true" scroll-with-animation="true">
+      <block wx:for="{{ navRightItems }}" wx:key="index">
+        <view class="title">
+          {{ item.title }}
+        </view>
+        <view style="overflow: hidden;">
+          <block wx:for="{{ item.desc }}" wx::key="index">
+            <view class="content">
+              <image src="{{ item.img }}" class="pic"></image>
+              <text class="txt">{{ item.text }}</text>
+            </view>
+          </block>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
